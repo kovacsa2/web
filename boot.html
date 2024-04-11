@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSSW</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(e71276ea-6038-4030-81a6-22984e3438bb_carbon-fiber-composite.avif);
+        }
+        /* Add custom styles here */
+        .jumbotron {
+            background-size: cover;
+            background-color: rgba(165, 165, 22, 0.877);
+            text-align: center;
+            padding: 200px 0;
+
+        }
+        footer {
+            color: black;
+            background-color: rgba(165, 165, 22, 0.877);;;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h2{
+            color: rgba(165, 165, 22, 0.877);;
+        }
+        .PIC{
+            width: 100px;
+        }
+        .collapse navbar-collapse{
+            color: rgba(165, 165, 22, 0.877);;
+        }
+        .nav-link{
+            color: rgba(165, 165, 22, 0.877);;
+        }
+        .navi{
+            color: rgba(165, 165, 22, 0.877);;
+        }
+        .form-group{
+            color: rgba(165, 165, 22, 0.877);;
+        }
+        .card{
+            background-color: rgba(165, 165, 22, 0.877);;;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation menu -->
+    <nav class="navv">
+        <a class="nav-link" class="navbarNav" href="#">Főoldal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navi">Menük</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">normál étlap</a>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pmenu">Prémium étlap</a>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#vmenu">VIP étlap</a>
+                </li>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#it">hideg italok</a>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#pit">Prémium italok</a>
+                                        <div class="collapse navbar-collapse" id="navbarNav">
+                                            <ul class="navbar-nav">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#vit">VIP italok</a>
+                                        <div class="collapse navbar-collapse" id="navbarNav">
+                                            <ul class="navbar-nav">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#dsz">desszertek</a>
+                        </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Kapcsolat</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Főoldal -->
+    <div class="jumbotron">
+        <h1>enter name here (ez a bolt neve)</h1>
+        <p>Avagy hogyan költsed a pénzed normálisan (vagy másét, engem nem érdekel)</p>
+        <p>nem copyrightos</p>
+        <p>megéri az ötöst🙏</p>
+        <p>幻想商店</p>
+    </div>
+    
+    <!-- Étlap -->
+    <div id="menu" class="container mt-5">
+        <h2>normál étlapunk:</h2>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">mac n' cheese </h5>
+                        <p class="card-text">Ár: 1 lélek</p>
+                        <img src="lead_Social_mac-and-cheese.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat card structure for other items -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">chicken alfredo</h5>
+                        <p class="card-text">Ár: 1 lélek</p>
+                        <img src="chicken-alfredo-index-64ee1026c82a9.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">halászlé</h5>
+                        <p class="card-text">Ár: ELFOGYOTT!!1!11!</p>
+                        <img src="lead_Social_halaszle-recept.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">103,7% igazi Magyar pizza</h5>
+                        <p class="card-text">Ár: 2 lélek</p>
+                        <img src="492207.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">10 piece (mekis nuggets)</h5>
+                        <p class="card-text">Ár: 2 lélek</p>
+                        <img src="csirke.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">bableveses bableves</h5>
+                        <p class="card-text">Ár: 99 lélek</p>
+                        <img src="letöltés.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pmenu" class="container mt-5">
+        <h2>Prémium étlapunk:</h2>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">zseblámpa </h5>
+                        <p class="card-text">Ár: 799 lélek</p>
+                        <img src="letöltés (1).jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat card structure for other items -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">mexikói mafia által felvágott fagyu hús braziliai krumplipürével</h5>
+                        <p class="card-text">Ár: 999 lélek</p>
+                        <img src="TELEMMGLPICT000268009086_trans_NvBQzQNjv4BqNJjoeBT78QIaYdkJdEY4CnGTJFJS74MYhNY6w3GNbO8.webp" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">valami</h5>
+                        <p class="card-text">Ár: 1599 lélek</p>
+                        <img src="unnamed.png" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">2015 McLaren P1</h5>
+                        <p class="card-text">Ár: 1 699 000 euró</p>
+                        <img src="ce60a13a-3cf3-4324-a355-00bb06466613.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Olaszország</h5>
+                        <p class="card-text">Ár: 9999 lélek</p>
+                        <img src="letöltés (2).jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">kézzel faragott palackos víz</h5>
+                        <p class="card-text">Ár: 29999 lélek</p>
+                        <img src="letöltés (3).jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="vmenu" class="container mt-5">
+        <h2>VIP tagok étlapja:</h2>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">bugatti bolide</h5>
+                        <p class="card-text">Ár: 199999 lélek</p>
+                        <img src="bb.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat card structure for other items -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">rántott csirkemell</h5>
+                        <p class="card-text">Ár: 999999 lélek</p>
+                        <img src="wtmrl.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">spicy hot tender wings</h5>
+                        <p class="card-text">Ár: elfelejtettem💀</p>
+                        <img src="shtw.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soksajtos pizza</h5>
+                        <p class="card-text">Ár: spotify premium + acer predator helios neo phn16-71-92p1</p>
+                        <img src="cheese.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">vízzel higított háromszög</h5>
+                        <p class="card-text">Ár: 2(x3-4)+2=x lélek</p>
+                        <img src="drjk.png" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">🗿</h5>
+                        <p class="card-text">Ár:  🗿</p>
+                        <img src="GettyImages-921707628.webp" class="PIC">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dsz" class="container mt-5">
+        <h2>desszertek:</h2>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">dobos torta</h5>
+                        <p class="card-text">Ár: 399 lélek</p>
+                        <img src="dbstrt.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat card structure for other items -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">m4-es autópálya</h5>
+                        <p class="card-text">Ár: ok</p>
+                        <img src="m4.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">rigó jancsi</h5>
+                        <p class="card-text">Ár: 1899 lélek
+                            <img src="rigoba.jpg" class="PIC">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">lúdláb</h5>
+                        <p class="card-text">Ár: 39 lélek/db</p>
+                        <img src="ldlb.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="it" class="container mt-5">
+        <h2>Hideg italok</h2>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">víz</h5>
+                        <p class="card-text">Ár: 0 lélek</p>
+                        <img src="viz.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat card structure for other items -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">tea (citromos, barackos)</h5>
+                        <p class="card-text">Ár: 12 lélek</p>
+                        <img src="xixo.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">sprite</h5>
+                        <p class="card-text">Ár: 12 lélek</p>
+                        <img src="sprite.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">monster (bármilyen)</h5>
+                        <p class="card-text">Ár: 15 lélek</p>
+                        <img src="monser.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">fanta</h5>
+                        <p class="card-text">Ár: 15 lélek</p>
+                        <img src="fanta.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">إ̶̖͘ن̵̛͈ه̴͚̓ ̸͕͑ي̸̙̈ر̷̬̑ا̴̞̒ق̴̹̆ب̵̣̿ك̴̠̀ ̴͈̈د̴̀ͅا̴̮̊ئ̵̬̕م̷̴ً̫͈͐̃ا̴̟̍</h5>
+                        <p class="card-text">Ár:  ا̷̻̒ه̸͉̀ر̶̯̈ب̵̗͒ ̷͙͝م̶̳͠ن̴̗̀ه̵̧̚</p>
+                        <img src="SQIZHWIQHWOQIJW.jpg" class="PIC">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pit" class="container mt-5">
+        <h2>Prémium italok</h2>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat card structure for other items -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="vit" class="container mt-5">
+        <h2>VIP italok</h2>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat card structure for other items -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">soon...</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Kapcsolat -->
+    <div id="contact" class="container mt-5">
+        <h2>Kapcsolat</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">neve:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail címe:</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Üzenete (ne beszéljen csúnyán, ígyis strikeoltak minket vagy ötször az elmúlt 1 órában):</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Küldés</button>
+        </form>
+    </div>
+    
+    <!-- Lábléc -->
+    <footer>
+        <div class="container">
+            <p>2024 non copyright.</p>
+                        <p>Helpers:</p>
+                        <ul>
+                        <li>foodora</li>
+                        <li>dominican republic</li>
+                        <li>mrbeast</li>
+                        </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
